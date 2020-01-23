@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Game extends JFrame{
+
     private JPanel mainPanel;
     private JButton button1;
     private JButton button2;
@@ -20,9 +21,13 @@ public class Game extends JFrame{
     private JButton button9;
     private int[][] boardData;
     private boolean player;
+
     public Game(){
         boardData = new int[3][3];
         player = true;
+        mainPanel.setName("mainPanel");
+        button1.setName("button1");
+        button1.setVisible(true);
         button1.setPreferredSize(new Dimension(200, 200));
         button1.setFont(new Font("Arial", Font.PLAIN, 40));
         button2.setPreferredSize(new Dimension(200, 200));
