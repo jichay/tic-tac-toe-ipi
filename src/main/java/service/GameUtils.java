@@ -36,15 +36,27 @@ public class GameUtils {
 
     /**
      * @param board state of the current game
-     * @return return if there is a winner according to the state
+     * @return return true if there is a winner according to the state
      */
     public static boolean checkWinner(int board[][]){
-        if(checkVertical(board) || checkVertical(board) || checkDiagonal(board)) return true;
+        if(checkVertical(board) || checkHorizontal(board) || checkDiagonal(board)) return true;
         return false;
     }
 
-    public static String getWinner(int board[][]){
-
+    /**
+     * @param board state of the current game
+     * @return return the number associated with the winning sign (0 if no winner)
+     */
+    public static int getWinner(int board[][]){
+        if (board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[0][0] != 0) return board[0][0];
+        if (board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[0][1] != 0) return board[0][1];
+        if (board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] != 0) return board[0][2];
+        if (board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][0] != 0) return board[0][0];
+        if (board[1][0] == board[1][1] && board[1][1] == board[1][2] && board[1][0] != 0) return board[1][0];
+        if (board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][0] != 0) return board[2][0];
+        if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != 0) return board[0][0];
+        if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != 0) return board[0][2];
+        return 0;
     }
 
 }
