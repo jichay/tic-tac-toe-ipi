@@ -5,7 +5,6 @@ import service.ViewUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Game extends JFrame{
@@ -27,15 +26,24 @@ public class Game extends JFrame{
         boardData = new int[3][3];
         player = true;
 
-        ViewUtils.setButtonProperty(button1);
-        ViewUtils.setButtonProperty(button2);
-        ViewUtils.setButtonProperty(button3);
-        ViewUtils.setButtonProperty(button4);
-        ViewUtils.setButtonProperty(button5);
-        ViewUtils.setButtonProperty(button6);
-        ViewUtils.setButtonProperty(button7);
-        ViewUtils.setButtonProperty(button8);
-        ViewUtils.setButtonProperty(button9);
+        button1.setPreferredSize(new Dimension(200, 200));
+        button1.setFont(new Font("Arial", Font.PLAIN, 40));
+        button2.setPreferredSize(new Dimension(200, 200));
+        button2.setFont(new Font("Arial", Font.PLAIN, 40));
+        button3.setPreferredSize(new Dimension(200, 200));
+        button3.setFont(new Font("Arial", Font.PLAIN, 40));
+        button4.setPreferredSize(new Dimension(200, 200));
+        button4.setFont(new Font("Arial", Font.PLAIN, 40));
+        button5.setPreferredSize(new Dimension(200, 200));
+        button5.setFont(new Font("Arial", Font.PLAIN, 40));
+        button6.setPreferredSize(new Dimension(200, 200));
+        button6.setFont(new Font("Arial", Font.PLAIN, 40));
+        button7.setPreferredSize(new Dimension(200, 200));
+        button7.setFont(new Font("Arial", Font.PLAIN, 40));
+        button8.setPreferredSize(new Dimension(200, 200));
+        button8.setFont(new Font("Arial", Font.PLAIN, 40));
+        button9.setPreferredSize(new Dimension(200, 200));
+        button9.setFont(new Font("Arial", Font.PLAIN, 40));
 
         ActionListener listener = e -> {
             if(GameUtils.checkWinner(boardData)){
@@ -44,6 +52,7 @@ public class Game extends JFrame{
                 JOptionPane.showMessageDialog(mainPanel, "Winner: " + winner);
             }
         };
+
         button1.addActionListener(listener);
         button2.addActionListener(listener);
         button3.addActionListener(listener);
@@ -163,7 +172,6 @@ public class Game extends JFrame{
         });
 
     }
-
 
     public JPanel getMainPanel() {
         return mainPanel;

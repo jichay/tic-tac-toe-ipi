@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ViewUtilsTest {
 
-    @Tag("front")
+    /*@Tag("front")
     @Test
     @DisplayName("Button property test1")
     public void checkButtonProperties1(){
@@ -41,6 +41,6 @@ public class ViewUtilsTest {
         Font expectedF = new Font("Arial", Font.PLAIN, 40);
         Font actualF = button.getFont();
         assertEquals(expectedF, actualF);
-    }
+    }*/
 
 }
