@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +7,7 @@ import service.GameUtils;
 
 public class GameUtilsTest {
 
+    @Tag("back")
     @Test
     @DisplayName("Winner check test 1")
     public void checkWinnerTest1(){
@@ -13,6 +15,7 @@ public class GameUtilsTest {
         assertFalse(GameUtils.checkWinner(boardData));
     }
 
+    @Tag("back")
     @Test
     @DisplayName("Winner check test 2")
     public void checkWinnerTest2(){
@@ -20,6 +23,7 @@ public class GameUtilsTest {
         assertTrue(GameUtils.checkWinner(boardData));
     }
 
+    @Tag("back")
     @Test
     @DisplayName("Winner check test 3")
     public void checkWinnerTest3(){
@@ -27,6 +31,7 @@ public class GameUtilsTest {
         assertTrue(GameUtils.checkWinner(boardData));
     }
 
+    @Tag("back")
     @Test
     @DisplayName("Winner check test 4")
     public void checkWinnerTest4(){
@@ -34,6 +39,7 @@ public class GameUtilsTest {
         assertTrue(GameUtils.checkWinner(boardData));
     }
 
+    @Tag("back")
     @Test
     @DisplayName("Get Winner test 1")
     public void getWinnerTest1(){
@@ -43,6 +49,7 @@ public class GameUtilsTest {
         assertEquals(expected, actual);
     }
 
+    @Tag("back")
     @Test
     @DisplayName("Get Winner test 2")
     public void getWinnerTest2(){
