@@ -1,7 +1,6 @@
 package view;
 
 import service.GameUtils;
-import service.ViewUtils;
 
 import javax.swing.*;
 import java.awt.*;
