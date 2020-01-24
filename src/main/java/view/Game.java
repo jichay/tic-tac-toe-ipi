@@ -49,7 +49,9 @@ public class Game extends JFrame{
 
         ActionListener listener = e -> {
             if(GameUtils.checkWinner(boardData)){
-                JOptionPane.showMessageDialog(mainPanel, "Winner");
+                String winner = "X";
+                if(GameUtils.getWinner(boardData) == 2) winner = "O";
+                JOptionPane.showMessageDialog(mainPanel, "Winner: " + winner);
             }
         };
         button1.addActionListener(listener);
