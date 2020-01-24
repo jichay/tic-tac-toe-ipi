@@ -26,7 +26,6 @@ public class Game extends JFrame{
         player = true;
 
         ViewUtils.setPanelProperty(mainPanel);
-        ViewUtils.setPanelProperty(mainPanel);
         ViewUtils.setButtonProperty(button1);
         ViewUtils.setButtonProperty(button2);
         ViewUtils.setButtonProperty(button3);
